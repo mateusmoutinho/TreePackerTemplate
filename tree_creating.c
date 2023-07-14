@@ -9,7 +9,7 @@ int main(){
     struct DtwTree *tree = newDtwTree();
     tree->add_tree_from_hardware(
             tree,
-            "tests/target/",
+            "test",
             &(DtwTreeProps){
                     .content = DTW_INCLUDE,
                     .hadware_data=DTW_HIDE,
@@ -19,7 +19,7 @@ int main(){
 
     tree->dumps_json_tree_to_file(
             tree,
-            "tests/target/out.json",
+            "out.json",
             &(DtwTreeProps){
                     .minification = DTW_NOT_MIMIFY,
                     .ignored_elements=DTW_HIDE,
