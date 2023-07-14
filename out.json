@@ -1,0 +1,21 @@
+[{
+		"path":	"a.txt",
+		"content_size":	13,
+		"content_sha256":	"383d121847242c6877eddfbcd4779aa38c90eff94a7be8f38279f28718b3755a",
+		"is_binary":	false,
+		"content":	"the a mensage"
+	}, {
+		"path":	"b.txt",
+		"content_size":	13,
+		"content_sha256":	"bc33a0cc344eb1f6dca8f3cc1d99362a27b9e8d3affaf1488bbc3d030a06e010",
+		"is_binary":	false,
+		"content":	"the b mensage"
+	}, {
+		"path":	"c/"
+	}, {
+		"path":	"c/c1.txt",
+		"content_size":	7,
+		"content_sha256":	"e46240714b5db3a23eee60479a623efba4d633d27fe4f03c904b9e219a7fbe60",
+		"is_binary":	false,
+		"content":	"aaaaaaa"
+	}]
