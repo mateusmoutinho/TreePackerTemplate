@@ -88,6 +88,9 @@ The loading occours on following part
 
 ### Dependecies and Atributions 
 #### DoTheWorld
+
+https://github.com/OUIsolutions/DoTheWorld
+
 MIT License
 
 Copyright (c) 2023 Mateus Moutinho Queiroz
@@ -112,6 +115,7 @@ SOFTWARE.
 
 
 #### CliInput
+https://github.com/WacoderForever/clinput
 
 MIT License
 
