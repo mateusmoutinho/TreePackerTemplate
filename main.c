@@ -26,26 +26,30 @@ int main(){
     CliInterface  interface = newCliInterface();
 
 
-    char *destination =  interface.ask_string(&interface,"inform the destionation: ",CLI_TRIM);
+    char *destination =  interface.ask_string(&interface,"inform the destionation",CLI_TRIM);
 
     //modifying the tree
-    for(int i = 0 ; i <exemple_folder->size; i++){
+    for(int i = 0 ; i <exemple_folder->size; i++) {
         DtwTreePart *current_part = exemple_folder->tree_parts[i];
         DtwPath *current_path = current_part->path;
-        current_path->add_start_dir(current_path,destination);
+        current_path->add_start_dir(current_path, destination);
+        current_part->hardware_write(current_part, DTW_SET_AS_ACTION);
     }
     DtwTreeTransactionReport *report = exemple_folder->report(exemple_folder);
 
     interface.print(&interface,"the foolowing transaction will be executed\n");
     report->represent(report);
 
-    bool execute = interface.ask_option(&interface,"continue ? (yes,no)","yes | no");
+    bool execute = interface.ask_option(&interface,"continue ? (yes,no)","no | yes");
+
     if(execute){
         exemple_folder->hardware_commit_tree(exemple_folder);
-        interface.print(&interface,"the following folder were copied");
+        interface.print(&interface,"transaction executed");
     }
+
     else{
         interface.warning(&interface,"transacton aborted");
+
     }
 
     report->free(report);
