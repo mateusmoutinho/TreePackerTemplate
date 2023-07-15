@@ -16,9 +16,9 @@ int main(){
     free(converted);
 
 
-    CliInterface  interface = newCliInterface();
+    CliInterface  cli = newCliInterface();
 
-    char *destination =  interface.ask_string(&interface,"inform the destionation",CLI_TRIM);
+    char *destination =  cli.ask_string(&cli,"inform the destionation",CLI_TRIM);
 
 
     //Iterate over the tree to add the start dir
@@ -32,19 +32,19 @@ int main(){
     //verifying if its to copy the folder
     DtwTreeTransactionReport *report = exemple_folder->report(exemple_folder);
 
-    interface.print(&interface,"the foolowing transaction will be executed\n");
+    cli.print(&cli,"the foolowing transaction will be executed\n");
     report->represent(report);
 
-    bool execute = interface.ask_option(&interface,"continue ? (yes,no)","no | yes");
+    bool execute = cli.ask_option(&cli,"continue ? (yes,no)","no | yes");
 
     if(execute){
         //implement the modifications
         exemple_folder->hardware_commit_tree(exemple_folder);
-        interface.print(&interface,"transaction executed");
+        cli.print(&cli,"transaction executed");
     }
 
     else{
-        interface.warning(&interface,"transacton aborted");
+        cli.warning(&cli,"transacton aborted");
 
     }
     free(destination);
