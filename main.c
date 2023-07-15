@@ -12,10 +12,9 @@ int main(){
     DtwTree *exemple_folder  = newDtwTree();
     long output_size;
     unsigned  char *converted = dtw_base64_decode(exemple_folder_in_base64,&output_size);
-    //whe hate to make it to reconvert to an normal string
-    converted[output_size] = '\0';
     exemple_folder->loads_json_tree(exemple_folder,(char*)converted);
     free(converted);
+
 
     CliInterface  interface = newCliInterface();
 
