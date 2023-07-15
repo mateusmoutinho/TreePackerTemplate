@@ -8,6 +8,10 @@
 *.elf
 article.md
 # Linker output
+teste 
+teste.c 
+tree.json
+
 *.ilk
 *.map
 *.exp

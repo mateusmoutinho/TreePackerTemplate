@@ -4,7 +4,7 @@ An Tree Packer template Repo
 ## Usage 
 first you need to run **tree_creating.c** to create the **folder_data.h** witch contains all the 
 tree in base64, after the **folder_data.h** were created , run **main.c** to generate the binary
-with the self contained folder.
+with the self-contained folder.
 
 
 ### Explanation

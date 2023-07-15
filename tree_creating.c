@@ -28,11 +28,14 @@ int main(){
                 .path_atributes = DTW_HIDE
             }
     );
+    //transform the json array into an b64 string
     char *inb64 = dtw_base64_encode((unsigned char *)result, strlen(result));
 
+    //creates an string with the b64 code
     char *folder_data = (char*) malloc(strlen(inb64) + 100);
     sprintf(folder_data,"const char *exemple_folder_in_base64 = \"%s\";",inb64);
 
+    //saves it into an folder_data.h
     dtw_write_string_file_content("folder_data.h",folder_data);
 
 
