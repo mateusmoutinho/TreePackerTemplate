@@ -1,7 +1,8 @@
 //
 // Created by mateusmoutinho on 14/07/23.
 //
-#include "doTheWorld.h"
+#include "dependencies/doTheWorld.h"
+#include  "dependencies/cliinput.h"
 #include "folder_data.h"
 
 DtwTree *exemple_folder = NULL;
@@ -22,7 +23,9 @@ int main(){
 
     load_exemple_tree();
 
-    exemple_folder->insecure_hardware_write_tree(exemple_folder);
+    //exemple_folder->insecure_hardware_write_tree(exemple_folder);
+    exemple_folder->represent(exemple_folder);
+    char *destination = "test";
     
-
+    exemple_folder->free(exemple_folder);
 }

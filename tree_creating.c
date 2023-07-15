@@ -1,12 +1,13 @@
 //
 // Created by jurandi on 20-06-2023.
 //
-#include "doTheWorld.h"
+#include "dependencies/doTheWorld.h"
 
 
 int main(){
 
     struct DtwTree *exemple_folder = newDtwTree();
+
     exemple_folder->add_tree_from_hardware(
             exemple_folder,
             "exemple_folder",
