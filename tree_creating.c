@@ -31,7 +31,7 @@ int main(){
     char *inb64 = dtw_base64_encode((unsigned char *)result, strlen(result));
 
     char *folder_data = (char*) malloc(strlen(inb64) + 100);
-    sprintf(folder_data,"const char *exemple_folderb_in_base64 = \"%s\";",inb64);
+    sprintf(folder_data,"const char *exemple_folder_in_base64 = \"%s\";",inb64);
 
     dtw_write_string_file_content("folder_data.h",folder_data);
 
